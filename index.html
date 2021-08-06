@@ -78,6 +78,7 @@ ul li a:hover{
   transform:translateY(-20px);
 }
 
+
   </style>
                                                                         
 </head>
@@ -127,13 +128,13 @@ ul li a:hover{
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="programmer.jpg" alt="First slide">
+      <img class="d-block w-100"style="height:70vh" src="programmer.jpg" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="coder.jpg" alt="Second slide">
+      <img class="d-block w-100"style="height:70vh" src="coder.jpg" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="photo.jpg" alt="Third slide">
+      <img class="d-block w-100"style="height:70vh" src="photo.jpg" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -151,7 +152,7 @@ ul li a:hover{
                                                                                 
 <section class="about">
   <div class=" jumbotron body container about">                 <!--cover whole display while container is used to make a box of a fix-->
-    <h1 class="text-center text-capitalize pt-5 display-4 animate__animated animate__fadeInDown about1">about me</h1> <br>    <!--display is used to increase to font size-->
+    <h1 class="text-center text-capitalize pt-5 display-4  about1">about me</h1> <br>    <!--display is used to increase to font size-->
 
 
      <div class="row rksab" style="width: auto;">        <!--  mb is margin from bottom -->
@@ -250,18 +251,20 @@ $(document).ready(function(){
   $(window).scroll(function(){
     var position = $(window).scrollTop();
     console.log(position);
-    if((position>1000)&&(position<2000)){
+    if((position>130)&&(position<2000)){
       $('.about1').addClass('animate__animated animate__fadeInDown');
     }
-    if((position>900)&&(position<2500)){
-      $('.card1').addClass(' animate__animated animate__zoomInLeft');
-      $('.card2').addClass(' animate__animated animate__zoomIn');
+    if((position>1100)&&(position<2500)){
+      $('.card1').addClass(' animate__animated animate__zoomInLeft');}
+      if((position>1400)&&(position<2500)){
+      $('.card2').addClass(' animate__animated animate__zoomIn');}
+      if((position>1800)&&(position<2500)){
       $('.card3').addClass(' animate__animated animate__zoomInRight');
     }
-    if((position>90)&&(position<220)){
+    if((position>220)&&(position<2500)){
       $('.rksab').addClass('animate__animated animate__lightSpeedInLeft');
     }
-    if((position>650)&&(position<1700)){
+    if((position>650)&&(position<1800)){
       $('.learning').addClass('animate__animated animate__fadeInDown');
     }
   })
